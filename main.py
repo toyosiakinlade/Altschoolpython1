@@ -48,11 +48,11 @@ async def home():
 
 @app.post("/users")
 async def create_users(
-    first_name: Annotated[str,Form],
-    last_name : Annotated[str,Form],
-    age: Annotated[int,Form],
-    email: Annotated[str,Form],
-    height: Annotated[float,Form],
+    first_name: Annotated[str,Form()],
+    last_name : Annotated[str,Form()],
+    age: Annotated[int,Form()],
+    email: Annotated[str,Form()],
+    height: Annotated[float,Form()],
 ):
     
     id = len(my_users) + 1
